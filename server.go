@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+func getApiKey() string {
+	// TODO this key is only a demo, register and get a real api key
+	return "https://eodhistoricaldata.com/api/fundamentals/AAPL.US?api_token=demo"
+}
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 not found.", http.StatusNotFound)
